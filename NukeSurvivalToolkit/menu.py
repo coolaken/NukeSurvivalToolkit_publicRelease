@@ -225,6 +225,7 @@ channelMenu.addSeparator()
 
 channelMenu.addCommand('streamCart MJT', "nuke.createNode('{}streamCart')".format(prefixNST), icon="streamCart.png")
 channelMenu.addCommand('renameChannels AG', "nuke.createNode('{}renameChannels')".format(prefixNST), icon="nukepedia_icon.png")
+channelMenu.addCommand('k_Remove NKPD', "nuke.createNode('{}k_Remove')".format(prefixNST), icon="Remove.png")
 
 
 ############################################################################################################
