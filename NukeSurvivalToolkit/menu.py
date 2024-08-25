@@ -732,3 +732,13 @@ gizmoDemoMenu.addCommand('UVEditor Demo MJT', "nuke.nodePaste('{}/nk_files/{}UVE
 gizmoDemoMenu.addCommand('Sparky Demo DB', "nuke.nodePaste('{}/nk_files/{}SparkyExampleScene.nk')".format(NST_FolderPath, prefixNST), icon="Sparky.png")
 gizmoDemoMenu.addCommand('ParticleLights Demo MHD', "nuke.nodePaste('{}/nk_files/{}ParticleLights_ExampleScript.nk')".format(NST_FolderPath, prefixNST), icon="ToolbarParticles.png")
 gizmoDemoMenu.addCommand("X_Aton Volumetric Demo XM", "nuke.nodePaste('{}/nk_files/{}X_Aton_Examples.nk')".format(NST_FolderPath, prefixNST), icon="X_Aton.png")
+
+
+# Create Shortcuteditor
+
+try:
+    import shortcuteditor
+    shortcuteditor.nuke_setup()
+except Exception:
+    import traceback
+    traceback.print_exc()
