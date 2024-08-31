@@ -742,3 +742,11 @@ try:
 except Exception:
     import traceback
     traceback.print_exc()
+
+# IMPORTS - these go in the beginning of your menu.py
+from nukescripts import panels
+import LayerShuffler
+
+
+# REGISTRATION - this goes at any point after the Imports
+panels.registerWidgetAsPanel("LayerShuffler.LayerShuffler", "Layer Shuffler", "LayerShufflerPanelId")
