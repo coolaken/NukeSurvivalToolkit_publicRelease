@@ -172,7 +172,7 @@ except:
 
 drawMenu.addSeparator()
 
-drawMenu.addCommand('VoronoiGradient NKPD', "nuke.createNode('{}VoronoiGradient')".format(prefixNST), icon="GradMagic.png")
+drawMenu.addCommand('VoronoiGradient NW', "nuke.createNode('{}VoronoiGradient')".format(prefixNST), icon="GradMagic.png")
 drawMenu.addCommand('CellNoise NKPD', "nuke.createNode('{}CellNoise')".format(prefixNST), icon="Noise.png")
 drawMenu.addCommand('LineTool NKPD', "nuke.createNode('{}LineTool')".format(prefixNST), icon="nukepedia_icon.png")
 drawMenu.addCommand('PlotScanline NKPD', "nuke.createNode('{}PlotScanline')".format(prefixNST), icon="nukepedia_icon.png")
@@ -350,6 +350,7 @@ apChromaMenu.addCommand('apChromaPremult AP', 'nuke.createNode("{}apChromaPremul
 filterMenu.addSeparator()
 
 filterMenu.addCommand('Chromatik SPIN', "nuke.createNode('{}Chromatik')".format(prefixNST), icon='spin_tools.png')
+filterMenu.addCommand('ChromaticAberration fxT', "nuke.createNode('{}fxT_ChromaticAberration')".format(prefixNST), icon='ColorLookup.png')
 filterMenu.addCommand("ChromaSmear LJ", "nuke.createNode('{}ChromaSmear')".format(prefixNST), icon="ColorLookup.png")
 
 filterMenu.addSeparator()
@@ -635,7 +636,6 @@ PosToolkit.addCommand('PosMatte MJT', 'nuke.createNode("{}PosMatte_MJ")'.format(
 PosToolkit.addCommand('PosPattern MJT', 'nuke.createNode("{}PosPattern_MJ")'.format(prefixNST), icon='PosPattern_MJ.png')
 PosToolkit.addCommand('PosProjection MJT', 'nuke.createNode("{}PosProjection_MJ")'.format(prefixNST), icon='PosProjection_MJ.png')
 
-
 cgMenu.addSeparator()
 
 cgMenu.addCommand('Noise_3D SPIN', 'nuke.createNode("{}Noise3D_spin")'.format(prefixNST), icon='spin_tools.png')
@@ -654,7 +654,8 @@ cgMenu.addCommand('NormalsRotate NKPD', "nuke.createNode('{}NormalsRotate')".for
 cgMenu.addCommand('Relight_bb NKPD', "nuke.createNode('{}Relight_bb')".format(prefixNST), icon="SpotLight.png")
 cgMenu.addCommand('EnvReflect_bb NKPD', "nuke.createNode('{}EnvReflect_BB')".format(prefixNST), icon="Sphere.png")
 cgMenu.addCommand('N_Reflection NKPD', "nuke.createNode('{}N_Reflection')".format(prefixNST), icon="Sphere.png")
-
+cgMenu.addCommand('aeRefracTHOR AE', "nuke.createNode('{}aeRefracTHOR')".format(prefixNST), icon="aeRefracTHOR_icon.png")
+cgMenu.addCommand('Emission NW', "nuke.createNode('{}Emission')".format(prefixNST), icon="Light.png")
 cgMenu.addCommand('SimpleSSS MHD', "nuke.createNode('{}SimpleSSS')".format(prefixNST), icon="Toolbar3D.png")
 
 cgMenu.addSeparator()
@@ -664,6 +665,12 @@ cgMenu.addCommand('P_Ramp NKPD', "nuke.createNode('{}F_P_Ramp')".format(prefixNS
 cgMenu.addCommand('P_Project NKPD', "nuke.createNode('{}F_P_Project')".format(prefixNST), icon="F_pproject.png")
 cgMenu.addCommand('Glue_P LS', "nuke.createNode('{}GlueP')".format(prefixNST), icon="PosProjection_MJ.png")
 cgMenu.addCommand('P_Noise_Advanced NKPD', "nuke.createNode('{}P_Noise_Advanced')".format(prefixNST), icon="Noise.png")
+
+cgMenu.addSeparator()
+
+cgMenu.addCommand('LightSwitch TL', "nuke.createNode('{}LightSwitch')".format(prefixNST), icon="Switch.png")
+cgMenu.addCommand('LightSwitchPuppet TL', "nuke.nodePaste('{}/nk_files/{}LightSwitchPuppet.nk')".format(NST_FolderPath, prefixNST), icon="Switch.png")
+
 
 ############################################################################################################
 ############################################################################################################
